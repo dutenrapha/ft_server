@@ -9,10 +9,11 @@ RUN apt update && \
 	apt install nginx -y && \
 	apt install mariadb-server -y && \
 	apt install php-fpm -y && \
-	apt install php-mysql -y
+	apt install php-mysql -y && \
+	apt install openssl -y
 
 RUN bash /tmp/config.sh
 
-EXPOSE 80
+EXPOSE 80 443
 
 ENTRYPOINT bash /tmp/initalize.sh
