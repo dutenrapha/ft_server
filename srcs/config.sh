@@ -56,4 +56,4 @@ sed '/put your unique phrase here/d' /var/www/html/wp-config.php > tmpfile && mv
 sed '/\/\*\*\#\@\-\*/r credentials.txt' /var/www/html/wp-config.php > tmpfile && mv tmpfile wp-config.php
 rm -f credentials.txt
 
-
+mkdir autoindex
