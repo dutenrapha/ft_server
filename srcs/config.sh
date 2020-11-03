@@ -49,7 +49,11 @@ sed 's/database_name_here/wordpress/g' /var/www/html/wp-config.php > tmpfile && 
 sed 's/username_here/user/g' /var/www/html/wp-config.php > tmpfile && mv tmpfile wp-config.php
 sed 's/password_here/user/g' /var/www/html/wp-config.php > tmpfile && mv tmpfile wp-config.php
 
+sed "/\/\*\*\#\@\-\*/i define\('FS_METHOD', 'direct'\);" /var/www/html/wp-config.php > tmpfile && mv tmpfile wp-config.php
+
 sed '/put your unique phrase here/d' /var/www/html/wp-config.php > tmpfile && mv tmpfile wp-config.php
 
 sed '/\/\*\*\#\@\-\*/r credentials.txt' /var/www/html/wp-config.php > tmpfile && mv tmpfile wp-config.php
 rm -f credentials.txt
+
+
