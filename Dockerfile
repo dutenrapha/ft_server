@@ -10,7 +10,10 @@ RUN apt update && \
 	apt install mariadb-server -y && \
 	apt install php-fpm -y && \
 	apt install php-mysql -y && \
-	apt install openssl -y
+	apt install wget -y && \
+	apt install gpg -y &&\
+	apt install openssl -y && \
+	apt install curl -y
 
 RUN bash /tmp/config.sh
 
